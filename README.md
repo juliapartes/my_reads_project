@@ -3,7 +3,8 @@
 ## How to run
 
 * Please, download zip with all files to your computer;
-* Go to your terminal and install the components with 'npm install' command;
+* Go to your terminal, change the folder to the project folder with 'cd' command;
+* Install the components with 'npm install' command;
 * Launch application by typing the 'npm start' command to the terminal.
 
 ## Overview
