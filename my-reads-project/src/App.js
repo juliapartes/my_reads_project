@@ -22,9 +22,12 @@ class BooksApp extends React.Component {
     }
 
   shelfChanger = (book, shelf) => {
-    BooksAPI.update(book, shelf);
-
-    this.getBooks()
+    BooksAPI.update(book, shelf).then(() => {
+      book.shelf = shelf
+      this.setState((state) => ({
+        books: state.books.filter(newBook => newBook.id !== book.id).concat([book]) })
+      )
+    })
   }
 
   render() {
